@@ -1,7 +1,17 @@
-# SRAS
-REDIS+MONGODB 둘을 묶어서 대용량 처리 테스트 베드 생성
+#SRAS
+REDIS+MONGODB를 활용한 대용량 메세징 부하 처리 테스트 배드
 
-#단순 조회 / 저장 /업로드 /검색 부분에 대해서 대용량 처리시 걸리는 시스템 적인 시간 체크
-#redis와 mongo 각각의 연결 드라이버와 아파치 풀과 Bson Document 라이브러리를 사용함.
-#UI는 기본적으로 swing으로 작성되었음
-#설치 후 property 파일에 연결정보 입력 해 주고 실행하면 됨.
+#기능
+1. Redis에서 전송된 Mongo Db 메시지 조회 
+2. Redis에 메세지 생성 및 저장과 Mongo Db로의 업로드
+3. Mongo Db에 저장된 메시지 검색
+의 기능을 통해 대용량 처리 시 소요되는 시간 분석 
+
+#구성
+1. Redis와 Mongo Db의 각각의 연결 드라이버 사용
+2. Apache pool과 Bson Document 라이브러리를 사용
+3. Swing Ui로 시각화 구성
+
+#실행
+1. jar 익스포트를 통해 실행
+2. Property 파일에 연결정보 설정 후 실행
